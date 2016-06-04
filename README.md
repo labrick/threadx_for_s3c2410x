@@ -1,1 +1,1 @@
-# threadx_for_s3c2440x
+# threadx_for_s3c2410x此处为skyeye运行的threadx实时操作系统
