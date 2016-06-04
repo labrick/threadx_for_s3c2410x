@@ -1,0 +1,747 @@
+Archive member included to satisfy reference by file (symbol)
+
+out/libarm.a(printf.o)        out/exception_handle.o (printf)
+out/libarm.a(string.o)        out/libarm.a(printf.o) (strlen)
+out/libarm.a(vsprintf.o)      out/libarm.a(printf.o) (vsprintf)
+out/libarm.a(div64.o)         out/libarm.a(vsprintf.o) (__do_div64)
+out/libarm.a(ctype.o)         out/libarm.a(string.o) (_ctype)
+
+Allocating common symbols
+Common symbol       size              file
+
+_tx_thread_priority_list
+                    0x80              out/threadx.o
+thread_2            0x94              out/main.o
+thread_3_counter    0x4               out/main.o
+_tx_timer_current_ptr
+                    0x4               out/threadx.o
+_tx_initialize_first_memory
+                    0x400000          out/threadX_cpu.o
+_tx_timer_list      0x80              out/threadx.o
+thread_5_counter    0x4               out/main.o
+semaphore_0         0x1c              out/main.o
+_tx_event_flags_created_ptr
+                    0x4               out/threadx.o
+thread_7            0x94              out/main.o
+___strtok           0x4               out/libarm.a(string.o)
+_tx_queue_created_count
+                    0x4               out/threadx.o
+_tx_semaphore_created_ptr
+                    0x4               out/threadx.o
+_tx_byte_pool_created_ptr
+                    0x4               out/threadx.o
+thread_7_counter    0x4               out/main.o
+_tx_el_event_area_end
+                    0x4               out/threadx.o
+_tx_thread_created_ptr
+                    0x4               out/threadx.o
+thread_0_counter    0x4               out/main.o
+_tx_timer_expired   0x4               out/threadx.o
+_tx_initialize_unused_memory
+                    0x4               out/threadx.o
+_tx_el_event_area_start
+                    0x4               out/threadx.o
+thread_2_counter    0x4               out/main.o
+thread_4            0x94              out/main.o
+_tx_timer_time_slice
+                    0x4               out/threadx.o
+_tx_thread_created_count
+                    0x4               out/threadx.o
+_tx_timer_priority  0x4               out/threadx.o
+_tx_el_maximum_events
+                    0x4               out/threadx.o
+thread_4_counter    0x4               out/main.o
+_tx_block_pool_created_count
+                    0x4               out/threadx.o
+_tx_el_current_event
+                    0x4               out/threadx.o
+_tx_thread_system_stack_ptr
+                    0x4               out/threadx.o
+thread_1            0x94              out/main.o
+GlobalTLS           0x2dc             out/threadx.o
+_tx_timer_list_end  0x4               out/threadx.o
+_tx_timer_thread    0x94              out/threadx.o
+_tx_thread_preempted_map
+                    0x4               out/threadx.o
+thread_6            0x94              out/main.o
+thread_1_counter    0x4               out/main.o
+_tx_thread_preempt_disable
+                    0x4               out/threadx.o
+_tx_timer_list_start
+                    0x4               out/threadx.o
+_tx_thread_current_ptr
+                    0x4               out/threadx.o
+_tx_timer_created_ptr
+                    0x4               out/threadx.o
+_tx_thread_priority_map
+                    0x4               out/threadx.o
+_tx_timer_stack_size
+                    0x4               out/threadx.o
+byte_pool_0         0x34              out/main.o
+mutex_0             0x24              out/main.o
+_tx_timer_stack_start
+                    0x4               out/threadx.o
+thread_3            0x94              out/main.o
+__ghLockMutex       0x24              out/threadx.o
+__ghsend_events     0x64              out/threadX_cpu.o
+thread_0            0x94              out/main.o
+_tx_thread_execute_ptr
+                    0x4               out/threadx.o
+_tx_thread_lowest_bit
+                    0x100             out/threadx.o
+_tx_timer_created_count
+                    0x4               out/threadx.o
+queue_0             0x38              out/main.o
+_tx_semaphore_created_count
+                    0x4               out/threadx.o
+thread_1_messages_sent
+                    0x4               out/main.o
+thread_2_messages_received
+                    0x4               out/main.o
+__ghsbegin_events   0x64              out/threadX_cpu.o
+_tx_thread_highest_priority
+                    0x4               out/threadx.o
+_tx_el_event_filter
+                    0x4               out/threadx.o
+_tx_timer_expired_time_slice
+                    0x4               out/threadx.o
+thread_6_counter    0x4               out/main.o
+event_flags_0       0x20              out/main.o
+_tx_timer_system_clock
+                    0x4               out/threadx.o
+_tx_event_flags_created_count
+                    0x4               out/threadx.o
+block_pool_0        0x30              out/main.o
+_tx_block_pool_created_ptr
+                    0x4               out/threadx.o
+_tx_el_total_events
+                    0x4               out/threadx.o
+thread_5            0x94              out/main.o
+_tx_timer_stack     0x800             out/threadX_cpu.o
+_tx_el_tni_start    0x4               out/threadx.o
+_tx_queue_created_ptr
+                    0x4               out/threadx.o
+_tx_byte_pool_created_count
+                    0x4               out/threadx.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000030000000                . = 0x30000000
+
+.text           0x0000000030000000     0xdc80
+ out/start.o(.text)
+ .text          0x0000000030000000      0x218 out/start.o
+                0x0000000030000000                _start
+                0x0000000030000000                _interrupt_vector_table
+                0x0000000030000020                reset_handle
+                0x0000000030000184                irq_handle
+                0x0000000030000194                switest
+                0x00000000300001a0                swi_handle
+                0x00000000300001ac                swi_hand
+                0x00000000300001e0                _disable_interrupt
+                0x00000000300001f4                _enable_interrupt
+                0x000000003000020c                _set_interrupt_vector
+ out/*(.text)
+ .text          0x0000000030000218      0x1e0 out/exception_handle.o
+                0x0000000030000218                setup_vector_addr
+                0x0000000030000230                c_swi_handler
+                0x0000000030000268                undef_handle
+                0x000000003000027c                fiq_handle
+                0x00000000300002a4                pabort_handle
+                0x00000000300002c8                dabort_handle
+                0x00000000300002dc                reserved_handle
+                0x00000000300002f0                umask_int
+                0x0000000030000308                enable_irq
+                0x0000000030000320                disable_irq
+                0x0000000030000338                register_irq_handler
+                0x0000000030000398                common_irq_handler
+ .text          0x00000000300003f8      0x6fc out/main.o
+                0x00000000300003f8                thread_6_and_7_entry
+                0x00000000300004e8                thread_5_entry
+                0x0000000030000568                thread_3_and_4_entry
+                0x000000003000060c                thread_2_entry
+                0x0000000030000688                thread_1_entry
+                0x00000000300006f4                thread_0_entry
+                0x0000000030000774                tx_application_define
+ .text          0x0000000030000af4       0x1c out/target.o
+                0x0000000030000af4                targetInit
+ .text          0x0000000030000b10      0x588 out/threadX_cpu.o
+                0x0000000030000b10                __cpp_exception_init
+                0x0000000030000b2c                __cpp_exception_cleanup
+                0x0000000030000b48                _tx_timer_interrupt
+                0x0000000030000cd0                _tx_thread_stack_build
+                0x0000000030000dec                __tx_thread_contex_restore
+                0x0000000030000e68                __tx_thread_contex_save
+                0x0000000030000ec8                __tx_thread_preempt_check
+ .text          0x0000000030001098      0x238 out/threadX_cpus.o
+                0x0000000030001098                __thread_swi_handle
+                0x00000000300010bc                __tx_thread_swi_disable_irq
+                0x00000000300010d0                __tx_thread_swi_enable_irq
+                0x00000000300010dc                __tx_thread_swi_system_return
+                0x0000000030001100                __tx_thread_restore
+                0x0000000030001180                __tx_thread_swi_schedule
+                0x0000000030001184                _tx_initialize_low_level
+                0x0000000030001218                __thread_irq_handle
+ .text          0x00000000300012d0     0x9154 out/threadx.o
+                0x00000000300012d0                _tx_block_allocate
+                0x0000000030001484                _tx_block_pool_create
+                0x00000000300016d0                _tx_block_pool_cleanup
+                0x000000003000186c                _tx_block_pool_delete
+                0x0000000030001a84                _tx_block_pool_initialize
+                0x0000000030001ab8                _tx_block_release
+                0x0000000030001c04                _tx_byte_allocate
+                0x0000000030001df0                _tx_byte_pool_create
+                0x0000000030001ff0                _tx_byte_pool_cleanup
+                0x000000003000218c                _tx_byte_pool_delete
+                0x00000000300023a4                _tx_byte_pool_initialize
+                0x00000000300023d8                _tx_byte_release
+                0x000000003000264c                _tx_byte_pool_search
+                0x0000000030002890                _tx_event_flags_create
+                0x00000000300029c4                _tx_event_flags_cleanup
+                0x0000000030002b60                _tx_event_flags_delete
+                0x0000000030002d78                _tx_event_flags_get
+                0x0000000030002f94                _tx_event_flags_initialize
+                0x0000000030002fc8                _tx_event_flags_set
+                0x0000000030003540                _tx_el_initialize
+                0x00000000300037cc                _tx_el_thread_register
+                0x0000000030003918                _tx_el_user_event_insert
+                0x0000000030003a84                _tx_el_thread_running
+                0x0000000030003b70                _tx_el_thread_preempted
+                0x0000000030003c64                _tx_el_interrupt
+                0x0000000030003d68                _tx_el_interrupt_end
+                0x0000000030003e6c                _tx_el_interrupt_control
+                0x0000000030003ed0                _tx_el_event_log_on
+                0x0000000030003ef4                _tx_el_event_log_off
+                0x0000000030003f1c                _tx_el_event_filter_set
+                0x0000000030003f48                GetThreadLocalStorage
+                0x0000000030003f68                tx_mutex_create
+                0x0000000030003fb8                tx_mutex_delete
+                0x0000000030003fe4                tx_mutex_get
+                0x0000000030004078                tx_mutex_put
+                0x00000000300040dc                __ghsLock
+                0x0000000030004100                __ghsUnlock
+                0x0000000030004120                __ghs_SaveSignalContext
+                0x0000000030004144                __ghs_RestoreSignalContext
+                0x0000000030004160                __gh_lock_init
+                0x000000003000418c                __get_eh_globals
+                0x00000000300041d4                __ghs_flock_file
+                0x00000000300041f0                __ghs_funlock_file
+                0x000000003000420c                __ghs_ftrylock_file
+                0x0000000030004230                __ghs_flock_create
+                0x000000003000424c                __ghs_flock_destroy
+                0x0000000030004268                _txs_thread_stack_check
+                0x00000000300042ec                _txs_thread_stack_check_2
+                0x00000000300043c0                _txs_thread_stack_check_2_fixup
+                0x0000000030004454                _tx_initialize_high_level
+                0x0000000030004484                _tx_initialize_kernel_enter
+                0x0000000030004514                _tx_initialize_kernel_setup
+                0x0000000030004554                _tx_queue_create
+                0x0000000030004754                _tx_queue_cleanup
+                0x000000003000490c                _tx_queue_delete
+                0x0000000030004b24                _tx_queue_flush
+                0x0000000030004d0c                _tx_queue_initialize
+                0x0000000030004d40                _tx_queue_receive
+                0x00000000300054f0                _tx_queue_send
+                0x0000000030005c08                _tx_semaphore_create
+                0x0000000030005d34                _tx_semaphore_cleanup
+                0x0000000030005ed0                _tx_semaphore_delete
+                0x00000000300060dc                _tx_semaphore_get
+                0x000000003000625c                _tx_semaphore_initialize
+                0x0000000030006290                _tx_semaphore_put
+                0x00000000300063d4                _tx_timer_activate
+                0x0000000030006550                _tx_timer_activate_api
+                0x0000000030006584                _tx_thread_create
+                0x0000000030006880                _tx_bring_in_ghs_support
+                0x000000003000689c                _tx_timer_deactivate
+                0x00000000300069b4                _tx_timer_deactivate_api
+                0x0000000030006b5c                _tx_thread_delete
+                0x0000000030006c94                _tx_thread_initialize
+                0x0000000030006dac                _tx_thread_identify
+                0x0000000030006dd0                _tx_timer_change
+                0x0000000030006e48                _tx_timer_create
+                0x0000000030006fac                _tx_timer_delete
+                0x00000000300070ac                _tx_time_get
+                0x0000000030007100                _tx_time_set
+                0x0000000030007150                _tx_timer_initialize
+                0x00000000300072a8                _tx_thread_preemption_change
+                0x0000000030007438                _tx_thread_priority_change
+                0x00000000300077b8                _tx_thread_resume
+                0x0000000030007a20                _tx_thread_resume_api
+                0x0000000030007b0c                _tx_thread_relinquish
+                0x0000000030007bfc                _tx_thread_suspend_api
+                0x0000000030007cec                _tx_thread_shell_entry
+                0x0000000030007d98                _tx_thread_sleep
+                0x0000000030007eb4                _tx_thread_suspend
+                0x00000000300083a0                _tx_thread_terminate
+                0x00000000300084d4                _tx_timer_thread_entry
+                0x0000000030008864                _tx_thread_timeout
+                0x000000003000892c                _tx_thread_time_slice
+                0x0000000030008a0c                _tx_thread_time_slice_change
+                0x0000000030008aac                _txe_block_allocate
+                0x0000000030008b70                _txe_block_pool_create
+                0x0000000030008c9c                _txe_block_pool_delete
+                0x0000000030008d40                _txe_block_release
+                0x0000000030008db4                _txe_byte_allocate
+                0x0000000030008ee4                _txe_byte_pool_create
+                0x0000000030008ff0                _txe_byte_pool_delete
+                0x0000000030009094                _txe_byte_release
+                0x0000000030009148                _txe_event_flags_create
+                0x000000003000921c                _txe_event_flags_delete
+                0x00000000300092c0                _txe_event_flags_get
+                0x00000000300093c4                _txe_event_flags_set
+                0x0000000030009450                _txe_queue_create
+                0x00000000300095b0                _txe_queue_delete
+                0x0000000030009654                _txe_queue_flush
+                0x00000000300096f8                _txe_queue_receive
+                0x00000000300097bc                _txe_queue_send
+                0x0000000030009880                _txe_semaphore_create
+                0x000000003000995c                _txe_semaphore_delete
+                0x0000000030009a00                _txe_semaphore_get
+                0x0000000030009aa8                _txe_semaphore_put
+                0x0000000030009b04                _txe_timer_activate_api
+                0x0000000030009b78                _txe_thread_create
+                0x0000000030009d00                _txe_timer_deactivate_api
+                0x0000000030009d5c                _txe_thread_delete
+                0x0000000030009de8                _txe_timer_delete
+                0x0000000030009e8c                _txe_timer_change
+                0x0000000030009f30                _txe_timer_create
+                0x000000003000a060                _txe_thread_preemption_change
+                0x000000003000a110                _txe_thread_resume_api
+                0x000000003000a16c                _txe_thread_relinquish
+                0x000000003000a1ac                _txe_thread_priority_change
+                0x000000003000a25c                _txe_thread_suspend_api
+                0x000000003000a2e8                _txe_thread_terminate
+                0x000000003000a374                _txe_thread_time_slice_change
+ .text          0x000000003000a424      0x124 out/timer.o
+                0x000000003000a424                timer_handler
+                0x000000003000a47c                timer_init
+ .text          0x000000003000a548       0xfc out/uart.o
+                0x000000003000a548                uart_init
+                0x000000003000a5b4                getc
+                0x000000003000a5f8                putc
+ .text          0x000000003000a644      0x158 out/libarm.a(printf.o)
+                0x000000003000a644                printf
+                0x000000003000a6d8                scanf
+ .text          0x000000003000a79c      0xf14 out/libarm.a(string.o)
+                0x000000003000a7ec                strnicmp
+                0x000000003000a904                strcpy
+                0x000000003000a980                strncpy
+                0x000000003000aa28                strcat
+                0x000000003000aac4                strncat
+                0x000000003000ab98                strcmp
+                0x000000003000ac40                strncmp
+                0x000000003000ad04                strchr
+                0x000000003000ad6c                strrchr
+                0x000000003000ade8                strlen
+                0x000000003000ae3c                strnlen
+                0x000000003000aebc                strspn
+                0x000000003000af80                strpbrk
+                0x000000003000b018                strtok
+                0x000000003000b108                strsep
+                0x000000003000b190                memset
+                0x000000003000b20c                bcopy
+                0x000000003000b294                memcpy
+                0x000000003000b324                memmove
+                0x000000003000b43c                memcmp
+                0x000000003000b4e4                memscan
+                0x000000003000b560                strstr
+                0x000000003000b610                memchr
+ .text          0x000000003000b6b0     0x24a0 out/libarm.a(vsprintf.o)
+                0x000000003000b700                simple_strtoul
+                0x000000003000b8c8                simple_strtol
+                0x000000003000b938                simple_strtoull
+                0x000000003000bb8c                simple_strtoll
+                0x000000003000c1c8                vsnprintf
+                0x000000003000cd48                vscnprintf
+                0x000000003000cdac                snprintf
+                0x000000003000ce00                scnprintf
+                0x000000003000ce70                vsprintf
+                0x000000003000ceb0                sprintf
+                0x000000003000cefc                vsscanf
+                0x000000003000db04                sscanf
+ .text          0x000000003000db50      0x130 out/libarm.a(div64.o)
+                0x000000003000db50                __do_div64
+ .text          0x000000003000dc80        0x0 out/libarm.a(ctype.o)
+
+.glue_7         0x000000003000dc80        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x000000003000dc80        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x000000003000dc80        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x000000003000dc80        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x000000003000dc80        0x0
+ .iplt          0x0000000000000000        0x0 out/start.o
+
+.text.startup   0x000000003000dc80       0xdc
+ .text.startup  0x000000003000dc80       0xdc out/main.o
+                0x000000003000dc80                main
+
+.rodata         0x000000003000dd5c      0x26c
+ out/*(.rodata)
+ .rodata        0x000000003000dd5c      0x190 out/threadX_cpu.o
+ .rodata        0x000000003000deec       0x84 out/threadx.o
+ .rodata        0x000000003000df70       0x58 out/libarm.a(vsprintf.o)
+
+.rodata.str1.4  0x000000003000dfc8      0x51c
+ .rodata.str1.4
+                0x000000003000dfc8       0xb9 out/exception_handle.o
+                                         0xbc (size before relaxing)
+ *fill*         0x000000003000e081        0x3 
+ .rodata.str1.4
+                0x000000003000e084      0x460 out/main.o
+
+.rel.dyn        0x000000003000e4e4        0x0
+ .rel.iplt      0x0000000000000000        0x0 out/start.o
+                0x0000000030010000                . = ALIGN (0x2000)
+
+.data           0x0000000030010000      0x1d8
+ out/*(.data)
+ .data          0x0000000030010000        0x0 out/start.o
+ .data          0x0000000030010000        0x0 out/exception_handle.o
+ .data          0x0000000030010000        0x0 out/main.o
+ .data          0x0000000030010000       0x18 out/target.o
+                0x0000000030010000                __ptx_sys_statck
+                0x0000000030010004                __ptx_svc_statck
+                0x0000000030010008                __ptx_irq_statck
+                0x000000003001000c                __ptx_fiq_statck
+                0x0000000030010010                __ptx_about_statck
+                0x0000000030010014                __ptx_undef_statck
+ .data          0x0000000030010018        0x0 out/threadX_cpu.o
+ .data          0x0000000030010018        0x0 out/threadX_cpus.o
+ .data          0x0000000030010018       0xbc out/threadx.o
+                0x0000000030010018                _tx_version_id
+                0x0000000030010074                _tx_thread_system_state
+                0x0000000030010078                _tx_thread_special_string
+ .data          0x00000000300100d4        0x0 out/timer.o
+ .data          0x00000000300100d4        0x0 out/uart.o
+ .data          0x00000000300100d4        0x0 out/libarm.a(printf.o)
+ .data          0x00000000300100d4        0x0 out/libarm.a(string.o)
+ .data          0x00000000300100d4        0x4 out/libarm.a(vsprintf.o)
+ .data          0x00000000300100d8        0x0 out/libarm.a(div64.o)
+ .data          0x00000000300100d8      0x100 out/libarm.a(ctype.o)
+                0x00000000300100d8                _ctype
+
+.igot.plt       0x00000000300101d8        0x0
+ .igot.plt      0x0000000000000000        0x0 out/start.o
+                0x00000000300101d8                . = ALIGN (0x4)
+                0x00000000300101d8                __bss_start = .
+
+.bss            0x00000000300101d8   0x406550
+ out/*(.bss)
+ .bss           0x00000000300101d8        0x0 out/start.o
+ .bss           0x00000000300101d8       0x88 out/exception_handle.o
+ .bss           0x0000000030010260        0x0 out/main.o
+ .bss           0x0000000030010260     0x4800 out/target.o
+ .bss           0x0000000030014a60        0x0 out/threadX_cpu.o
+ .bss           0x0000000030014a60        0x0 out/threadX_cpus.o
+ .bss           0x0000000030014a60        0x4 out/threadx.o
+                0x0000000030014a60                _tx_el_fake_time_stamp
+ .bss           0x0000000030014a64        0x4 out/timer.o
+ .bss           0x0000000030014a68        0x0 out/uart.o
+ COMMON         0x0000000030014a68      0x5c4 out/main.o
+                0x0000000030014a68                thread_2
+                0x0000000030014afc                thread_3_counter
+                0x0000000030014b00                thread_5_counter
+                0x0000000030014b04                semaphore_0
+                0x0000000030014b20                thread_7
+                0x0000000030014bb4                thread_7_counter
+                0x0000000030014bb8                thread_0_counter
+                0x0000000030014bbc                thread_2_counter
+                0x0000000030014bc0                thread_4
+                0x0000000030014c54                thread_4_counter
+                0x0000000030014c58                thread_1
+                0x0000000030014cec                thread_6
+                0x0000000030014d80                thread_1_counter
+                0x0000000030014d84                byte_pool_0
+                0x0000000030014db8                mutex_0
+                0x0000000030014ddc                thread_3
+                0x0000000030014e70                thread_0
+                0x0000000030014f04                queue_0
+                0x0000000030014f3c                thread_1_messages_sent
+                0x0000000030014f40                thread_2_messages_received
+                0x0000000030014f44                thread_6_counter
+                0x0000000030014f48                event_flags_0
+                0x0000000030014f68                block_pool_0
+                0x0000000030014f98                thread_5
+ COMMON         0x000000003001502c   0x4008c8 out/threadX_cpu.o
+                0x000000003001502c                _tx_initialize_first_memory
+                0x000000003041502c                __ghsend_events
+                0x0000000030415090                __ghsbegin_events
+                0x00000000304150f4                _tx_timer_stack
+ COMMON         0x00000000304158f4      0x630 out/threadx.o
+                0x00000000304158f4                _tx_thread_priority_list
+                0x0000000030415974                _tx_timer_current_ptr
+                0x0000000030415978                _tx_timer_list
+                0x00000000304159f8                _tx_event_flags_created_ptr
+                0x00000000304159fc                _tx_queue_created_count
+                0x0000000030415a00                _tx_semaphore_created_ptr
+                0x0000000030415a04                _tx_byte_pool_created_ptr
+                0x0000000030415a08                _tx_el_event_area_end
+                0x0000000030415a0c                _tx_thread_created_ptr
+                0x0000000030415a10                _tx_timer_expired
+                0x0000000030415a14                _tx_initialize_unused_memory
+                0x0000000030415a18                _tx_el_event_area_start
+                0x0000000030415a1c                _tx_timer_time_slice
+                0x0000000030415a20                _tx_thread_created_count
+                0x0000000030415a24                _tx_timer_priority
+                0x0000000030415a28                _tx_el_maximum_events
+                0x0000000030415a2c                _tx_block_pool_created_count
+                0x0000000030415a30                _tx_el_current_event
+                0x0000000030415a34                _tx_thread_system_stack_ptr
+                0x0000000030415a38                GlobalTLS
+                0x0000000030415d14                _tx_timer_list_end
+                0x0000000030415d18                _tx_timer_thread
+                0x0000000030415dac                _tx_thread_preempted_map
+                0x0000000030415db0                _tx_thread_preempt_disable
+                0x0000000030415db4                _tx_timer_list_start
+                0x0000000030415db8                _tx_thread_current_ptr
+                0x0000000030415dbc                _tx_timer_created_ptr
+                0x0000000030415dc0                _tx_thread_priority_map
+                0x0000000030415dc4                _tx_timer_stack_size
+                0x0000000030415dc8                _tx_timer_stack_start
+                0x0000000030415dcc                __ghLockMutex
+                0x0000000030415df0                _tx_thread_execute_ptr
+                0x0000000030415df4                _tx_thread_lowest_bit
+                0x0000000030415ef4                _tx_timer_created_count
+                0x0000000030415ef8                _tx_semaphore_created_count
+                0x0000000030415efc                _tx_thread_highest_priority
+                0x0000000030415f00                _tx_el_event_filter
+                0x0000000030415f04                _tx_timer_expired_time_slice
+                0x0000000030415f08                _tx_timer_system_clock
+                0x0000000030415f0c                _tx_event_flags_created_count
+                0x0000000030415f10                _tx_block_pool_created_ptr
+                0x0000000030415f14                _tx_el_total_events
+                0x0000000030415f18                _tx_el_tni_start
+                0x0000000030415f1c                _tx_queue_created_ptr
+                0x0000000030415f20                _tx_byte_pool_created_count
+ .bss           0x0000000030415f24      0x800 out/libarm.a(printf.o)
+ .bss           0x0000000030416724        0x0 out/libarm.a(string.o)
+ COMMON         0x0000000030416724        0x4 out/libarm.a(string.o)
+                0x0000000030416724                ___strtok
+ .bss           0x0000000030416728        0x0 out/libarm.a(vsprintf.o)
+ .bss           0x0000000030416728        0x0 out/libarm.a(div64.o)
+ .bss           0x0000000030416728        0x0 out/libarm.a(ctype.o)
+                0x0000000030416728                _end = .
+LOAD out/exception_handle.o
+LOAD out/main.o
+LOAD out/start.o
+LOAD out/target.o
+LOAD out/threadX_cpu.o
+LOAD out/threadX_cpus.o
+LOAD out/threadx.o
+LOAD out/timer.o
+LOAD out/uart.o
+LOAD out/libarm.a
+START GROUP
+END GROUP
+OUTPUT(zmOS elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x26
+ .ARM.attributes
+                0x0000000000000000       0x1a out/start.o
+ .ARM.attributes
+                0x000000000000001a       0x2a out/exception_handle.o
+ .ARM.attributes
+                0x0000000000000044       0x2a out/main.o
+ .ARM.attributes
+                0x000000000000006e       0x2a out/target.o
+ .ARM.attributes
+                0x0000000000000098       0x2a out/threadX_cpu.o
+ .ARM.attributes
+                0x00000000000000c2       0x1a out/threadX_cpus.o
+ .ARM.attributes
+                0x00000000000000dc       0x2a out/threadx.o
+ .ARM.attributes
+                0x0000000000000106       0x2a out/timer.o
+ .ARM.attributes
+                0x0000000000000130       0x2a out/uart.o
+ .ARM.attributes
+                0x000000000000015a       0x2a out/libarm.a(printf.o)
+ .ARM.attributes
+                0x0000000000000184       0x2a out/libarm.a(string.o)
+ .ARM.attributes
+                0x00000000000001ae       0x2a out/libarm.a(vsprintf.o)
+ .ARM.attributes
+                0x00000000000001d8       0x1a out/libarm.a(div64.o)
+ .ARM.attributes
+                0x00000000000001f2       0x2a out/libarm.a(ctype.o)
+
+.comment        0x0000000000000000       0x2b
+ .comment       0x0000000000000000       0x2b out/exception_handle.o
+                                         0x2c (size before relaxing)
+ .comment       0x0000000000000000       0x2c out/main.o
+ .comment       0x0000000000000000       0x2c out/target.o
+ .comment       0x0000000000000000       0x2c out/threadX_cpu.o
+ .comment       0x0000000000000000     0x1104 out/threadx.o
+ .comment       0x0000000000000000       0x2c out/timer.o
+ .comment       0x0000000000000000       0x2c out/uart.o
+ .comment       0x0000000000000000       0x2c out/libarm.a(printf.o)
+ .comment       0x0000000000000000       0x2c out/libarm.a(string.o)
+ .comment       0x0000000000000000       0x2c out/libarm.a(vsprintf.o)
+ .comment       0x0000000000000000       0x2c out/libarm.a(ctype.o)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/exception_handle.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/target.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/threadX_cpu.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/threadx.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/timer.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/uart.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/libarm.a(printf.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/libarm.a(string.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/libarm.a(vsprintf.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 out/libarm.a(ctype.o)
+
+.debug_line     0x0000000000000000     0x42dc
+ .debug_line    0x0000000000000000       0xd1 out/start.o
+ .debug_line    0x00000000000000d1       0xce out/exception_handle.o
+ .debug_line    0x000000000000019f      0x1f1 out/main.o
+ .debug_line    0x0000000000000390       0x3c out/target.o
+ .debug_line    0x00000000000003cc      0x119 out/threadX_cpu.o
+ .debug_line    0x00000000000004e5       0xde out/threadX_cpus.o
+ .debug_line    0x00000000000005c3     0x341b out/threadx.o
+ .debug_line    0x00000000000039de       0x89 out/timer.o
+ .debug_line    0x0000000000003a67       0x54 out/uart.o
+ .debug_line    0x0000000000003abb       0x72 out/libarm.a(printf.o)
+ .debug_line    0x0000000000003b2d      0x264 out/libarm.a(string.o)
+ .debug_line    0x0000000000003d91      0x49c out/libarm.a(vsprintf.o)
+ .debug_line    0x000000000000422d       0x87 out/libarm.a(div64.o)
+ .debug_line    0x00000000000042b4       0x28 out/libarm.a(ctype.o)
+
+.debug_info     0x0000000000000000    0x1b998
+ .debug_info    0x0000000000000000       0x65 out/start.o
+ .debug_info    0x0000000000000065      0x42e out/exception_handle.o
+ .debug_info    0x0000000000000493     0x16ba out/main.o
+ .debug_info    0x0000000000001b4d      0x158 out/target.o
+ .debug_info    0x0000000000001ca5      0x651 out/threadX_cpu.o
+ .debug_info    0x00000000000022f6       0x7b out/threadX_cpus.o
+ .debug_info    0x0000000000002371    0x17fa0 out/threadx.o
+ .debug_info    0x000000000001a311      0x15f out/timer.o
+ .debug_info    0x000000000001a470       0x7f out/uart.o
+ .debug_info    0x000000000001a4ef      0x142 out/libarm.a(printf.o)
+ .debug_info    0x000000000001a631      0x886 out/libarm.a(string.o)
+ .debug_info    0x000000000001aeb7      0xa2f out/libarm.a(vsprintf.o)
+ .debug_info    0x000000000001b8e6       0x64 out/libarm.a(div64.o)
+ .debug_info    0x000000000001b94a       0x4e out/libarm.a(ctype.o)
+
+.debug_abbrev   0x0000000000000000     0x6262
+ .debug_abbrev  0x0000000000000000       0x14 out/start.o
+ .debug_abbrev  0x0000000000000014      0x1ba out/exception_handle.o
+ .debug_abbrev  0x00000000000001ce      0x21c out/main.o
+ .debug_abbrev  0x00000000000003ea       0x95 out/target.o
+ .debug_abbrev  0x000000000000047f      0x19f out/threadX_cpu.o
+ .debug_abbrev  0x000000000000061e       0x14 out/threadX_cpus.o
+ .debug_abbrev  0x0000000000000632     0x572a out/threadx.o
+ .debug_abbrev  0x0000000000005d5c       0x99 out/timer.o
+ .debug_abbrev  0x0000000000005df5       0x76 out/uart.o
+ .debug_abbrev  0x0000000000005e6b       0xa7 out/libarm.a(printf.o)
+ .debug_abbrev  0x0000000000005f12      0x19f out/libarm.a(string.o)
+ .debug_abbrev  0x00000000000060b1      0x15f out/libarm.a(vsprintf.o)
+ .debug_abbrev  0x0000000000006210       0x14 out/libarm.a(div64.o)
+ .debug_abbrev  0x0000000000006224       0x3e out/libarm.a(ctype.o)
+
+.debug_aranges  0x0000000000000000      0xe00
+ .debug_aranges
+                0x0000000000000000       0x20 out/start.o
+ .debug_aranges
+                0x0000000000000020       0x20 out/exception_handle.o
+ .debug_aranges
+                0x0000000000000040       0x28 out/main.o
+ .debug_aranges
+                0x0000000000000068       0x20 out/target.o
+ .debug_aranges
+                0x0000000000000088       0x20 out/threadX_cpu.o
+ .debug_aranges
+                0x00000000000000a8       0x20 out/threadX_cpus.o
+ .debug_aranges
+                0x00000000000000c8      0xc60 out/threadx.o
+ .debug_aranges
+                0x0000000000000d28       0x20 out/timer.o
+ .debug_aranges
+                0x0000000000000d48       0x20 out/uart.o
+ .debug_aranges
+                0x0000000000000d68       0x20 out/libarm.a(printf.o)
+ .debug_aranges
+                0x0000000000000d88       0x20 out/libarm.a(string.o)
+ .debug_aranges
+                0x0000000000000da8       0x20 out/libarm.a(vsprintf.o)
+ .debug_aranges
+                0x0000000000000dc8       0x20 out/libarm.a(div64.o)
+ .debug_aranges
+                0x0000000000000de8       0x18 out/libarm.a(ctype.o)
+
+.debug_loc      0x0000000000000000     0x2528
+ .debug_loc     0x0000000000000000      0x20d out/exception_handle.o
+ .debug_loc     0x000000000000020d      0x35f out/main.o
+ .debug_loc     0x000000000000056c       0x2c out/target.o
+ .debug_loc     0x0000000000000598      0x134 out/threadX_cpu.o
+ .debug_loc     0x00000000000006cc     0x162c out/threadx.o
+ .debug_loc     0x0000000000001cf8       0x58 out/timer.o
+ .debug_loc     0x0000000000001d50       0x84 out/uart.o
+ .debug_loc     0x0000000000001dd4       0x70 out/libarm.a(printf.o)
+ .debug_loc     0x0000000000001e44      0x420 out/libarm.a(string.o)
+ .debug_loc     0x0000000000002264      0x2c4 out/libarm.a(vsprintf.o)
+
+.debug_str      0x0000000000000000     0x2c23
+ .debug_str     0x0000000000000000      0x323 out/exception_handle.o
+                                        0x347 (size before relaxing)
+ .debug_str     0x0000000000000323      0xc6e out/main.o
+                                        0xcdb (size before relaxing)
+ .debug_str     0x0000000000000f91      0x126 out/target.o
+                                        0x13b (size before relaxing)
+ .debug_str     0x00000000000010b7      0x289 out/threadX_cpu.o
+                                        0x5c8 (size before relaxing)
+ .debug_str     0x0000000000001340     0x15a8 out/threadx.o
+                                      0x1af28 (size before relaxing)
+ .debug_str     0x00000000000028e8       0x60 out/timer.o
+                                        0x249 (size before relaxing)
+ .debug_str     0x0000000000002948       0x4f out/uart.o
+                                         0x6a (size before relaxing)
+ .debug_str     0x0000000000002997       0x58 out/libarm.a(printf.o)
+                                         0xa3 (size before relaxing)
+ .debug_str     0x00000000000029ef       0xf6 out/libarm.a(string.o)
+                                        0x180 (size before relaxing)
+ .debug_str     0x0000000000002ae5      0x136 out/libarm.a(vsprintf.o)
+                                        0x238 (size before relaxing)
+ .debug_str     0x0000000000002c1b        0x8 out/libarm.a(ctype.o)
+                                         0x68 (size before relaxing)
+
+.debug_frame    0x0000000000000000     0x1d84
+ .debug_frame   0x0000000000000000      0x13c out/exception_handle.o
+ .debug_frame   0x000000000000013c      0x10c out/main.o
+ .debug_frame   0x0000000000000248       0x2c out/target.o
+ .debug_frame   0x0000000000000274       0xc0 out/threadX_cpu.o
+ .debug_frame   0x0000000000000334     0x1504 out/threadx.o
+ .debug_frame   0x0000000000001838       0x48 out/timer.o
+ .debug_frame   0x0000000000001880       0x58 out/uart.o
+ .debug_frame   0x00000000000018d8       0x60 out/libarm.a(printf.o)
+ .debug_frame   0x0000000000001938      0x26c out/libarm.a(string.o)
+ .debug_frame   0x0000000000001ba4      0x1e0 out/libarm.a(vsprintf.o)
+
+.debug_ranges   0x0000000000000000       0x30
+ .debug_ranges  0x0000000000000000       0x30 out/main.o

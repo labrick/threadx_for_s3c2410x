@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+
+void uart_init();
+extern volatile int counter;
+
+void delay(unsigned long count)
+{
+	volatile unsigned long i = count;
+	while (i--);
+}
+void check_register(unsigned int arg1, unsigned int arg2)
+{
+
+	printf("arg1=0x%08x, arg2=0x%08x\n", arg1, arg2);
+
+}
+
+
+int test[100] = {0};
+extern void switest(int arg);
+extern int __bss_start;
+int main(void)
+{
+	int temp = 0;
+	uart_init();
+//	timer_init();
+//	enable_irq();
+	//printf("__bss_start:0x%08x, addr:0x%08x\n", __bss_start, &__bss_start);
+	printf("test swi\n");
+	switest(3);
+	printf("test swi over\n");
+
+	//__asm__( "wfi\n");//while(1)
+	while(1);
+	{
+		temp ++;
+		if(temp % 100000 == 0)
+		{
+			printf("temp:%d\n", temp);
+			switest(temp / 100000);
+		}
+	}
+	return 0;
+}
+#define swi_handle(x, y) swi_handle#x(x, y)
